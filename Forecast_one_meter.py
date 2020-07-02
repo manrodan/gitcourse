@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
 
 #forecasting, getting bounding boxes, labels and probabilities
 def forecast(meter):
@@ -23,9 +21,6 @@ def forecast(meter):
     return results.predictions
 
 
-# In[2]:
-
-
 # creating dict with values for each tag {tag:[prob,left, top, width, height]}
 def dict(prediction):
 
@@ -41,8 +36,6 @@ def dict(prediction):
         parameters.update( {i: lista})
     return parameters,numbers
 
-
-# In[3]:
 
 
 #getting left box and digit
@@ -82,9 +75,6 @@ def digit(meter):
     return (reading_tag)
 
 
-# In[4]:
-
-
 #drawing bounding_boxes on meter
 def drawing_bound(meter,prediction,parameters,numbers):
     import numpy as np
@@ -116,9 +106,6 @@ def drawing_bound(meter,prediction,parameters,numbers):
     nombre='bounding_'+str(meter)
     #print('grabacion imagen',nombre)
     cv2.imwrite(nombre,im)
-
-
-# In[6]:
 
 
 #getting readings for meters 
@@ -175,10 +162,3 @@ if __name__ == '__main__':
     app.run(debug = True)
     
   
-
-
-# In[ ]:
-
-
-
-
